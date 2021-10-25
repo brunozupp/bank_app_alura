@@ -13,6 +13,11 @@ class TransferInsertPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final transferModel = ModalRoute.of(context)!.settings.arguments as TransferModel?;
+    _accountController.text = transferModel?.account.toString() ?? "";
+    _valueController.text = transferModel?.value.toString() ?? "";
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Transferências"),
