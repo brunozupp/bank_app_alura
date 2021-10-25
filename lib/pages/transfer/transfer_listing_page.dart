@@ -57,6 +57,27 @@ class _TransferListingPageState extends State<TransferListingPage> {
               child: ListTile(
                 title: Text("Conta: ${transfer.account}"),
                 subtitle: Text("Valor: R\$ ${transfer.value}"),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                      icon: const Icon(
+                        Icons.edit
+                      ),
+                      onPressed: () {
+
+                      }, 
+                    ),
+                    IconButton(
+                      icon: const Icon(
+                        Icons.delete
+                      ),
+                      onPressed: () {
+                        
+                      }, 
+                    ),
+                  ],
+                ),
               ),
             );
           }
